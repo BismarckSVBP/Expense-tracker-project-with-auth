@@ -3,21 +3,28 @@ const mongoose = require("mongoose");
 const urlSchema = new mongoose.Schema(
   {
     expenseamount: {
-      type: Number,
+      type: Date,
       required: true,
      
     },
     incomeamount: {
       type: Number,
       required: true,
-       unique: false,
+       
     },
     expensedescription: {
       type: String,
+      required: true,
+    },
+    uname:{
+      type: String,
+      
     },
     expensecategory: {
       type: String,
+      required: true,
     },
+
     visitHistory: [{ timestamp: { type: Number } }],
 
     createdBy: {
