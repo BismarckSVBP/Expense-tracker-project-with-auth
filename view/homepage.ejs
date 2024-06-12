@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selecting</title>
+    <title>Login Page</title>
     <style>
       body {
         background-image: url(./WhatsApp\ Image\ 2024-05-31\ at\ 14.31.49_28d27a8f.jpg);
-        background-color: rgba(52, 248, 69, 0.3);
+        background-color: rgba(41, 157, 206, 0.3);
       }
       .outer {
         width: 500px;
@@ -73,20 +73,29 @@
       }
     </style>
   </head>
+
   <body>
+  </div>
+  <% if (locals.id) { %>
+ <%= id %></p>
+  <% } %>
+
+  <div>
     <div class="outer">
       <div class="login">
-        <form method="GET" action="/signup">
-          <label class="label"><h1 class="h1">Sign-Up</h1></label>
-          <button class="button">Submit</button>
-          </form>
-          <b><hr></b>
-                   
-          <form method="GET" action="/user/login">
-          <label class="label"><h1 class="h1">Login</h1></label>
-          <button class="button">Submit</button>
-          </form>
+        <form method="POST" action="/user/logged">
+          <h1>login</h1>
+          <!-- <label>UserID</label>
+          <input type="text" name="id" /> -->
+          <label>Username</label>
+          <input type="text" name="username" />
+          <label>Email-ID</label>
+          <input type="email" name="emailID" />
+          <label>Password</label>
+          <input type="password" name="password" />
+          <button>Submit</button>
+        </form>
       </div>
-    </div>   
+    </div>
   </body>
 </html>
