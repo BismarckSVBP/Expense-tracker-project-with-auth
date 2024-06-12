@@ -5,6 +5,7 @@ async function handleUI(req, res) {
   if (!body.expenseamount | !body.incomeamount) return res.status(400).json({ Error: "Entering expenseamount & incomeamount is required" });
  
   await UI.create({
+    uname:body.uname,
     expenseamount: body.expenseamount,
     incomeamount: body.incomeamount,
     expensedescription: body.expensedescription,
