@@ -22,7 +22,6 @@ connectToMongoDB("mongodb+srv://abhay:abhay@cluster0.nmhaanc.mongodb.net/?retryW
   console.log("MongoDb connected")
 );
 
-
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./view"));
 
