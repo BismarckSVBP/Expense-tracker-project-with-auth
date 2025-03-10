@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const { restrictToLoggedinUserOnly, checkAuth} = require("./middlewares/foraccessingafterloginpage");
 const app = express();
 
-const sleeptracker = require("./routes/sleeptracker");
+
 const homepage = require("./routes/homepage");
 
 
@@ -40,7 +40,6 @@ app.use("/user/expense",restrictToLoggedinUserOnly,checkAuth,expense);
 
 app.use("/user/afterloginpage",restrictToLoggedinUserOnly,afterlogin);
 
-app.use("/user/sleeptracker",restrictToLoggedinUserOnly,sleeptracker);
 
 app.use("/homepage",homepage);
 
