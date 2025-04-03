@@ -18,7 +18,7 @@ const homepage = require("./routes/homepage");
 
 
 const port = 10001;
-connectToMongoDB("mongodb://localhost:27017/expense").then(() =>
+connectToMongoDB("mongodb+srv://kasaudhanabhaykumar8562:Ram1975@url-shortner.yfje7vq.mongodb.net/").then(() =>
   console.log("MongoDb connected")
 );
 
